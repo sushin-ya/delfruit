@@ -1,9 +1,16 @@
 import "./App.css";
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
+import Contents from "./components/Contents/Contents";
 
 function App() {
   return (
     <div className='App'>
-      <h1>DELFRUIT</h1>
+      <div className='container'>
+        <Header />
+        <Contents />
+        <Footer />
+      </div>
     </div>
   );
 }

@@ -1,0 +1,19 @@
+.Header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background-color: transparent;
+  z-index: 100;
+}
+
+.HeaderInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+  max-width: 1070px;
+}
