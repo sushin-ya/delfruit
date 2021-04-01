@@ -1,7 +1,7 @@
 import React from "react";
 import "./Hero.css";
 
-import SwiperCore, { Navigation } from "swiper";
+import SwiperCore, { Navigation, Autoplay } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper.scss";
 import "swiper/components/navigation/navigation.scss";
@@ -13,12 +13,12 @@ import image3 from "./images/image-3.jpg";
 import arrow from "./images/arrow.svg";
 
 // install Swiper modules
-SwiperCore.use([Navigation]);
+SwiperCore.use([Navigation, Autoplay]);
 
 export default function Hero() {
   return (
-    <div className='Hero'>
-      <Swiper navigation loop grabCursor speed={1000}>
+    <div className='hero'>
+      <Swiper navigation loop grabCursor speed={1000} autoplay>
         <SwiperSlide>
           <div className='hero__title'>Enjoy Rich</div>
           <img src={image1} alt='' />

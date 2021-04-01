@@ -1,13 +1,13 @@
 import React from "react";
 import "./Logo.css";
-import { FaAppleAlt } from "react-icons/fa";
+import logo from "./images/logo.svg";
 
 export default function Logo() {
   return (
     <div className='logo'>
-      <FaAppleAlt className="Apple"/>
-      <span className="Del">Del</span>
-      <span className="Fruit">Fruit</span>
+      <img src={logo} alt='' className='logoImg' />
+      <span>Stay</span>
+      <span className='World'>World</span>
     </div>
   );
 }

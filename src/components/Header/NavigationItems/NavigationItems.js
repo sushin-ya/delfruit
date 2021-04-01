@@ -1,5 +1,6 @@
 import React from "react";
 import "./NavigationItems.css";
+import Button from "../../UI/Button/Button";
 
 export default function NavigationItems() {
   return (
@@ -11,9 +12,7 @@ export default function NavigationItems() {
         <a href='#/'>COMPANY</a>
       </li>
       <li>
-        <a href='#/' className='btn'>
-          CONTACT
-        </a>
+        <Button content='CONTACT' />
       </li>
     </ul>
   );

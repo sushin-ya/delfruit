@@ -1,10 +1,11 @@
-.Hero {
+.hero {
   overflow: hidden;
   padding-top: 100px;
 }
 
 .swiper-container {
   overflow: visible !important;
+  height: 500px;
 }
 
 .swiper-slide {

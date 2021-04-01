@@ -1,13 +1,16 @@
 import React from "react";
+import "./Contents.css";
 import Hero from "./Hero/Hero";
+import Houses from "./Houses/Houses";
+import Travel from "./Travel/Travel";
 
 export default function Contents() {
   return (
-    <div className='contents'>
+    <div>
       <Hero />
-      <div>apple</div>
-      <div>orange</div>
-      <div>banana</div>
+      <Travel />
+      <Houses />
+      <div>popular</div>
     </div>
   );
 }

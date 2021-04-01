@@ -2,10 +2,11 @@
   font-size: 38px;
 }
 
-.Apple {
-  fill: #8c0000;
+.logoImg {
+  width: 0.7em;
+  vertical-align: middle;
 }
 
-.Fruit {
+.World {
   color: #8c0000;
 }
