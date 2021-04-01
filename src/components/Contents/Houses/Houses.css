@@ -17,3 +17,20 @@ p {
 .more {
   text-align: center;
 }
+
+.housesInner {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 600px) {
+  .housesInner {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .housesItem {
+    flex-basis: 50%;
+    margin-bottom: 60px;
+  }
+}

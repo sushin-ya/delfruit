@@ -1,6 +1,6 @@
 import React from "react";
 import "./Houses.css";
-import CoverSlideImage from "./CoverSlideImage/CoverSlideImage";
+import CoverSlideImage from "../../UI/CoverSlideImage/CoverSlideImage";
 import Button from "../../UI/Button/Button";
 
 import villa1 from "./images/villa-1.jpg";
@@ -18,14 +18,14 @@ export default function Houses() {
         <h2>Find Your Houses</h2>
         <p>お気に入りの宿泊先を見つけよう</p>
       </div>
-      {images.map((img, index) => (
-        <div className='housesInner'>
+      <div className='housesInner'>
+        {images.map((img, index) => (
           <div className='housesItem'>
             <CoverSlideImage image={img} />
             <p className='housesTitle'>House {index + 1}</p>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
       <div className='more'>
         <Button content='もっと詳しく' />
       </div>
