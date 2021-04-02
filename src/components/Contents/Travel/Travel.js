@@ -10,7 +10,7 @@ export default function Travel() {
     <div className='travel'>
       <div className='travelInner'>
         <div className='travelImage'>
-          <CoverSlideImage image={img} />
+          <CoverSlideImage image={img} type='image' />
         </div>
         <div className='travelTexts'>
           <div className='travelTextsInner'>

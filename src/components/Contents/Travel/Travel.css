@@ -22,7 +22,13 @@
 }
 
 .travelImage {
-  height: 300px;
+  margin-bottom: 16px;
+}
+
+.travelTexts {
+  padding-bottom: 16px;
+  display: flex;
+  align-items: flex-end;
 }
 
 .purple {
@@ -30,8 +36,24 @@
 }
 
 @media (min-width: 600px) {
+  .travelInner {
+    flex-direction: row;
+    padding: 50px;
+  }
   .travelImage,
   .travelTexts {
     flex-basis: 47%;
+  }
+}
+
+@media (min-width: 960px) {
+  .travelDescription {
+    margin-bottom: 40px;
+  }
+}
+
+@media (min-width: 600px) {
+  .travelInner {
+    padding: 50px 150px;
   }
 }

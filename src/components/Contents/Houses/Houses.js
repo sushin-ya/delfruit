@@ -20,8 +20,8 @@ export default function Houses() {
       </div>
       <div className='housesInner'>
         {images.map((img, index) => (
-          <div className='housesItem'>
-            <CoverSlideImage image={img} />
+          <div className='housesItem' key={index}>
+            <CoverSlideImage image={img} type='div' />
             <p className='housesTitle'>House {index + 1}</p>
           </div>
         ))}

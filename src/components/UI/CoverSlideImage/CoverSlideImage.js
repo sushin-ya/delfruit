@@ -4,7 +4,7 @@ import { useInView } from "react-intersection-observer";
 
 import "./CoverSlideImage.css";
 
-export default function CoverSlideImage({ image }) {
+export default function CoverSlideImage({ image, type }) {
   const [ref, inView] = useInView({
     threshold: 0,
   });
@@ -21,11 +21,10 @@ export default function CoverSlideImage({ image }) {
     reset: true,
   });
 
-  return (
-    <div
-      ref={ref}
-      className={inView ? "coverSlides hoverDarken" : "coverSlides"}
-    >
+  let animatedComponent;
+
+  if (type === "div") {
+    animatedComponent = (
       <animated.div
         className='imgZoom'
         style={{
@@ -42,6 +41,35 @@ export default function CoverSlideImage({ image }) {
             .interpolate((x) => `scale(${x})`),
         }}
       />
+    );
+  } else {
+    animatedComponent = (
+      <animated.img
+        className='imgZoom image'
+        style={{
+          opacity: x.interpolate({
+            range: [0, 0.5, 0.51, 1],
+            output: [0, 0, 1, 1],
+          }),
+          transform: x
+            .interpolate({
+              range: [0, 0.5, 0.51, 1],
+              output: [1.5, 1.5, 1.5, 1],
+            })
+            .interpolate((x) => `scale(${x})`),
+        }}
+        src={image}
+        alt=''
+      />
+    );
+  }
+
+  return (
+    <div
+      ref={ref}
+      className={inView ? "coverSlides hoverDarken" : "coverSlides"}
+    >
+      {animatedComponent}
       <animated.div
         className='coverSlide'
         style={{
