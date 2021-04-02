@@ -18,7 +18,7 @@ export default function Popular() {
     { img: imagep4, title: "大阪" },
   ];
   const [ref, inView] = useInView({
-    threshold: 0,
+    threshold: 0.8,
   });
   const items = images.map((_, index) => ({
     to: {

@@ -3,3 +3,35 @@
   margin: 0 auto;
   max-width: 1070px;
 }
+
+.travelInner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 15px;
+  background-color: #eaebe6;
+}
+
+.travelTitle {
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.travelSub {
+  margin-bottom: 16px;
+}
+
+.travelImage {
+  height: 300px;
+}
+
+.purple {
+  color: #904669;
+}
+
+@media (min-width: 600px) {
+  .travelImage,
+  .travelTexts {
+    flex-basis: 47%;
+  }
+}
