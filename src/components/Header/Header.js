@@ -1,12 +1,12 @@
 import React from "react";
 import "./Header.css";
-import Logo from "./Logo/Logo";
+import Logo from "../UI/Logo/Logo";
 import NavigationItems from "./NavigationItems/NavigationItems";
 
 export default function Header() {
   return (
-    <header className='Header'>
-      <div className='HeaderInner'>
+    <header className='header'>
+      <div className='headerInner'>
         <Logo />
         <NavigationItems />
       </div>
