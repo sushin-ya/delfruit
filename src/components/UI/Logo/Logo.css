@@ -1,0 +1,21 @@
+.logo {
+  font-size: 38px;
+  display: flex;
+  justify-content: center;
+}
+
+.logoImg {
+  width: 0.7em;
+  vertical-align: middle;
+}
+
+.World {
+  color: #8c0000;
+}
+
+@media (min-width: 600px) {
+  .logo {
+    font: 38px;
+    justify-content: flex-start;
+  }
+}

@@ -1,0 +1,22 @@
+.footer {
+  padding: 60px 0;
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+  max-width: 1070px;
+}
+
+.footerNav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+@media (min-width: 600px) {
+  .footerNav {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
