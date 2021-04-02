@@ -4,15 +4,23 @@ import "./Travel.css";
 import img from "./images/image-travel.jpg";
 import CoverSlideImage from "../../UI/CoverSlideImage/CoverSlideImage";
 import Button from "../../UI/Button/Button";
+import { useInView } from "react-intersection-observer";
 
 export default function Travel() {
+  const [ref, inView] = useInView({
+    threshold: 0.8,
+    triggerOnce: true,
+  });
   return (
     <div className='travel'>
       <div className='travelInner'>
         <div className='travelImage'>
           <CoverSlideImage image={img} type='image' />
         </div>
-        <div className='travelTexts'>
+        <div
+          className={inView ? "travelTexts inview" : "travelTexts"}
+          ref={ref}
+        >
           <div className='travelTextsInner'>
             <div className='travelTitle'>
               <span className='purple'>Travel</span>

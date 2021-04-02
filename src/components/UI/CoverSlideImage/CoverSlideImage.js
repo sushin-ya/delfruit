@@ -6,7 +6,8 @@ import "./CoverSlideImage.css";
 
 export default function CoverSlideImage({ image, type }) {
   const [ref, inView] = useInView({
-    threshold: 0,
+    threshold: 0.8,
+    triggerOnce: true,
   });
   const { x } = useSpring({
     from: { x: 0 },
@@ -25,64 +26,82 @@ export default function CoverSlideImage({ image, type }) {
 
   if (type === "div") {
     animatedComponent = (
-      <animated.div
-        className='imgZoom'
-        style={{
-          backgroundImage: `url(${image})`,
-          opacity: x.interpolate({
-            range: [0, 0.5, 0.51, 1],
-            output: [0, 0, 1, 1],
-          }),
-          transform: x
-            .interpolate({
+      <>
+        <animated.div
+          className='imgZoom'
+          style={{
+            backgroundImage: `url(${image})`,
+            opacity: x.interpolate({
               range: [0, 0.5, 0.51, 1],
-              output: [1.5, 1.5, 1.5, 1],
-            })
-            .interpolate((x) => `scale(${x})`),
-        }}
-      />
+              output: [0, 0, 1, 1],
+            }),
+            transform: x
+              .interpolate({
+                range: [0, 0.5, 0.51, 1],
+                output: [1.5, 1.5, 1.5, 1],
+              })
+              .interpolate((x) => `scale(${x})`),
+          }}
+        />
+        <animated.div
+          className='coverSlide'
+          style={{
+            left: left.interpolate({
+              range: [0, 0.5, 1],
+              output: ["0%", "0%", "100%"],
+            }),
+            right: right.interpolate({
+              range: [0, 0.5, 1],
+              output: ["100%", "0%", "0%"],
+            }),
+          }}
+        />
+      </>
     );
   } else {
     animatedComponent = (
-      <animated.img
-        className='imgZoom image'
-        style={{
-          opacity: x.interpolate({
-            range: [0, 0.5, 0.51, 1],
-            output: [0, 0, 1, 1],
-          }),
-          transform: x
-            .interpolate({
+      <>
+        {" "}
+        <animated.img
+          className='imgZoom image'
+          style={{
+            opacity: x.interpolate({
               range: [0, 0.5, 0.51, 1],
-              output: [1.5, 1.5, 1.5, 1],
-            })
-            .interpolate((x) => `scale(${x})`),
-        }}
-        src={image}
-        alt=''
-      />
+              output: [0, 0, 1, 1],
+            }),
+            transform: x
+              .interpolate({
+                range: [0, 0.5, 0.51, 1],
+                output: [1.5, 1.5, 1.5, 1],
+              })
+              .interpolate((x) => `scale(${x})`),
+          }}
+          src={image}
+          alt=''
+        />
+        <animated.div
+          className='coverSlide'
+          style={{
+            left: left.interpolate({
+              range: [0, 0.5, 1],
+              output: ["0%", "0%", "100%"],
+            }),
+            right: right.interpolate({
+              range: [0, 0.5, 1],
+              output: ["100%", "0%", "0%"],
+            }),
+          }}
+        />
+      </>
     );
   }
 
   return (
     <div
       ref={ref}
-      className={inView ? "coverSlides hoverDarken" : "coverSlides"}
+      className={inView ? "coverSlides hoverDarken " : "coverSlides"}
     >
       {animatedComponent}
-      <animated.div
-        className='coverSlide'
-        style={{
-          left: left.interpolate({
-            range: [0, 0.5, 1],
-            output: ["0%", "0%", "100%"],
-          }),
-          right: right.interpolate({
-            range: [0, 0.5, 1],
-            output: ["100%", "0%", "0%"],
-          }),
-        }}
-      />
     </div>
   );
 }

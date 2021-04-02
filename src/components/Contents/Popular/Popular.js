@@ -38,7 +38,6 @@ export default function Popular() {
 
   useEffect(() => {
     if (inView) setEnter(true);
-    else setEnter(false);
   }, [inView]);
 
   return (
