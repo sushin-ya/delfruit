@@ -9,3 +9,7 @@ img {
   max-width: 100%;
   vertical-align: bottom;
 }
+
+button {
+  outline: none;
+}

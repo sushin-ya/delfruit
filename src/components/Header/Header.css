@@ -18,3 +18,27 @@
   justify-content: space-between;
   align-items: center;
 }
+
+.headerNav {
+  display: none;
+}
+
+.humberger {
+  display: block;
+}
+
+.humberger > div > span,
+.humberger > div > span::before,
+.humberger > div > span::after {
+  height: 2px;
+}
+
+@media (min-width: 960px) {
+  .headerNav {
+    display: block;
+  }
+
+  .humberger {
+    display: none;
+  }
+}
