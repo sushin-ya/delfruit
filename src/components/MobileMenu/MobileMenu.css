@@ -1,9 +1,43 @@
-.mobile-menu {
+.mobileMenu {
+  position: fixed;
+  right: 0;
+  top: 60px;
+  width: 300px;
+}
+
+ul.mobileMenuMain {
   display: block;
 }
 
-@media (min-width: 960px) {
-  .mobile-menu {
-    display: none;
-  }
+.mobileMenuMain {
+  padding: 0;
+  perspective: 2000px;
+  transform-style: preserve-3d;
+}
+
+.mobileMenuLink {
+  display: block;
+  margin-top: 30px;
+  color: black;
+  text-decoration: none !important;
+}
+
+.mobileMenuItem {
+  transform: translate3d(0, 0, -1000px);
+  margin: 0;
+  padding: 0 40px;
+  transition: transform 0.3, opacity 0.2s;
+  /* opacity: 0; */
+}
+
+.mainTitle {
+  font-weight: 600;
+  font-size: 25px;
+  display: block;
+}
+
+.subTitle {
+  display: block;
+  font-size: 14px;
+  color: #535353;
 }

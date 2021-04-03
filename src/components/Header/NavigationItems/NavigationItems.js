@@ -4,7 +4,7 @@ import Button from "../../UI/Button/Button";
 
 export default function NavigationItems() {
   return (
-    <ul>
+    <ul className="navUl">
       <li>
         <a href='#/'>SERVICE</a>
       </li>

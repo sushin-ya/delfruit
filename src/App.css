@@ -2,7 +2,6 @@ body {
   margin: 0;
   font-family: "Kameron", "Noto Sans JP", sans-serif;
   line-height: 1.5;
-  font-size: 1rem;
 }
 
 img {
@@ -12,4 +11,15 @@ img {
 
 button {
   outline: none;
+}
+
+.container {
+  position: relative;
+  z-index: 10;
+  transition: all 0.5s;
+}
+
+.container.mobileOpen {
+  transform: translate(-300px, 60px);
+  box-shadow: 0 8px 40px -10px rgba(0, 0, 0, 0.8);
 }
