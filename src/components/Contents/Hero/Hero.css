@@ -1,6 +1,7 @@
 .hero {
   overflow: hidden;
   padding-top: 100px;
+  padding-bottom: 80px;
 }
 
 .swiper-container {
