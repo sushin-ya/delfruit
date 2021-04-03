@@ -4,6 +4,23 @@
   height: 100%;
   margin: 0 auto;
   max-width: 1070px;
+  transform: translateY(6px);
+  opacity: 0;
+}
+
+.footer.inveiw {
+  animation: up 1s ease-in 1 forwards;
+}
+
+@keyframes up {
+  from {
+    transform: translateY(6px);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
 }
 
 .footerNav {

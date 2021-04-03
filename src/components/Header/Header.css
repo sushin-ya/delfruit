@@ -8,6 +8,18 @@
   display: flex;
   align-items: center;
   z-index: 100;
+  animation: up 1s ease-in 1;
+}
+
+@keyframes up {
+  from {
+    transform: translateY(6px);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
 }
 
 .header.triggered {

@@ -21,7 +21,9 @@ export default function Travel() {
           className={inView ? "travelTexts inview" : "travelTexts"}
           ref={ref}
         >
-          <div className='travelTextsInner'>
+          <div
+            className={inView ? "travelTextsInner inview" : "travelTextsInner"}
+          >
             <div className='travelTitle'>
               <span className='purple'>Travel</span>
               <span>the world</span>

@@ -12,7 +12,7 @@
   padding: 15px;
   background-color: #eaebe6;
   position: relative;
-  z-index: 0;
+  z-index: 10;
 }
 
 .travelTitle {
@@ -55,6 +55,26 @@
 
 .purple {
   color: #904669;
+}
+
+.travelTextsInner {
+  transform: translateX(20px);
+  opacity: 0;
+}
+
+.travelTextsInner.inview {
+  animation: left 1s ease-in 1 forwards;
+}
+
+@keyframes left {
+  from {
+    transform: translateX(20px);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
 }
 
 @media (min-width: 600px) {
