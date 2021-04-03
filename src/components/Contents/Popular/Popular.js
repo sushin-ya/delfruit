@@ -3,6 +3,7 @@ import "./Popular.css";
 import Button from "../../UI/Button/Button";
 import { useSprings, animated } from "react-spring";
 import { useInView } from "react-intersection-observer";
+import TextAnimation from "../../UI/TextAnimation/TextAnimation";
 
 import imagep1 from "./images/image-p1.jpg";
 import imagep2 from "./images/image-p2.jpg";
@@ -18,7 +19,7 @@ export default function Popular() {
     { img: imagep4, title: "大阪" },
   ];
   const [ref, inView] = useInView({
-    threshold: 0.5,
+    threshold: 0,
   });
   const items = images.map((_, index) => ({
     to: {
@@ -43,8 +44,15 @@ export default function Popular() {
   return (
     <div className='Popular'>
       <div className='popularHeader'>
-        <h2>Popular Place</h2>
-        <p>人気の観光地で宿泊先を見つけましょう</p>
+        <h2>
+          <TextAnimation content='Popular Place' inView={inView} />
+        </h2>
+        <p>
+          <TextAnimation
+            content='人気の観光地で宿泊先を見つけましょう'
+            inView={inView}
+          />
+        </p>
       </div>
       <div className='popularInner'>
         <div className='popularContainer' ref={ref}>

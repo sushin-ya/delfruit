@@ -4,7 +4,7 @@ import Logo from "../UI/Logo/Logo";
 import NavigationItems from "./NavigationItems/NavigationItems";
 import { HamburgerSpin } from "react-animated-burgers";
 
-export default function Header({ inview, mobileToggle }) {
+export default function Header({ inView, mobileToggle }) {
   const [isActive, setIsActive] = useState(false);
 
   function toggleButton() {
@@ -13,7 +13,7 @@ export default function Header({ inview, mobileToggle }) {
   }
 
   return (
-    <header className={inview ? "header triggered" : "header"}>
+    <header className={inView ? "header triggered" : "header"}>
       <div className='headerInner'>
         <Logo />
         <div className='headerNav'>

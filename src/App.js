@@ -24,8 +24,8 @@ function App() {
           onClick={mobileToggle}
         />
         <div className='navTrigger' ref={ref} />
-        <Header inview={!inView} mobileToggle={mobileToggle} />
-        <Contents />
+        <Header inView={!inView} mobileToggle={mobileToggle} />
+        <Contents inView={!inView} />
         <Footer />
       </div>
       <MobileMenu mobileState={mobileState} />

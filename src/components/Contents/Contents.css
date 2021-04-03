@@ -3,6 +3,7 @@
   position: fixed;
   top: 70%;
   transform: translateY(-50%);
+  transition: all 0.3s ease-in;
 }
 
 .side a,
@@ -12,6 +13,10 @@
 }
 
 .side.left {
+  left: -50px;
+}
+
+.side.left.inview {
   left: 50px;
 }
 
@@ -21,6 +26,10 @@
 }
 
 .side.right {
+  right: -50px;
+}
+
+.side.right.inview {
   right: 50px;
 }
 
