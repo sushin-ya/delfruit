@@ -16,13 +16,19 @@ function App() {
 
   return (
     <div className='App'>
-      <div className='navTrigger' ref={ref} />
       <div className={mobileState ? "container mobileOpen" : "container"}>
+        <div
+          className={
+            mobileState ? "mobileMenuCover mobileOpen" : "mobileMenuCover"
+          }
+          onClick={mobileToggle}
+        />
+        <div className='navTrigger' ref={ref} />
         <Header inview={!inView} mobileToggle={mobileToggle} />
         <Contents />
         <Footer />
       </div>
-      <MobileMenu />
+      <MobileMenu mobileState={mobileState} />
     </div>
   );
 }
