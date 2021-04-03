@@ -1,0 +1,72 @@
+.side {
+  display: none;
+  position: fixed;
+  top: 70%;
+  transform: translateY(-50%);
+}
+
+.side a,
+.side span {
+  margin: 0 40px;
+  vertical-align: middle;
+}
+
+.side.left {
+  left: 50px;
+}
+
+.side.left .sideInner {
+  transform-origin: left top;
+  transform: rotate(-90deg);
+}
+
+.side.right {
+  right: 50px;
+}
+
+.side.right .sideInner {
+  transform-origin: right top;
+  transform: rotate(90deg);
+}
+
+@media (min-width: 1280px) {
+  .side {
+    display: block;
+  }
+}
+
+.icon {
+  position: relative;
+}
+
+.icon::before {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -20px;
+  width: 1em;
+  height: 1em;
+  transform: translateY(-50%);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.twitter.icon::before {
+  background-image: url(./images/twitter.svg);
+}
+
+.facebook.icon::before {
+  background-image: url(./images/facebook.svg);
+}
+
+.mainContents {
+  position: relative;
+  z-index: 0;
+}
+
+main {
+  position: relative;
+  z-index: -1;
+}
