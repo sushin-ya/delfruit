@@ -1,9 +1,13 @@
 import React from "react";
 import "./MobileMenu.css";
+import Logo from "../UI/Logo/Logo";
 
 export default function MobileMenu({ mobileState }) {
   return (
     <nav className='mobileMenu'>
+      <div className='mobileMenuLogo'>
+        <Logo />
+      </div>
       <ul className='mobileMenuMain'>
         <li
           className={mobileState ? "mobileMenuItem menuOpen" : "mobileMenuItem"}

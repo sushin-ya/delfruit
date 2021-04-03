@@ -17,6 +17,7 @@ button {
   position: relative;
   z-index: 10;
   transition: all 0.5s;
+  background-color: white;
 }
 
 .container.mobileOpen {
